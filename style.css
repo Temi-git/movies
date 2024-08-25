@@ -1,0 +1,92 @@
+#loginPage {
+  background-image: url('https://image.tmdb.org/t/p/original/qJRB789ceLryrLvOKrZqLKr2CGf.jpg'); /* Replace with your movie wallpaper URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+
+
+
+/* Introduction Section */
+#introSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+#introText {
+  max-width: 50%;
+}
+#introText h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#introText p {
+  font-size: 1.25rem;
+}
+#introImage {
+  max-width: 50%;
+  transition: transform 0.5s ease;
+}
+#introImage:hover {
+  transform: scale(1.1);
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+/* Card Shadow and Hover Effect */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Custom styles */
+body {
+  position: relative; /* Required for scrollspy */
+}
+/* Scroll-to-top button styles */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s;
+}
+#scrollToTop:hover {
+  background-color: #0056b3;
+}
+
+/* Introduction section styling */
+.introduction-section img {
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+  transform: scale(1); /* Default scale */
+}
+
+.introduction-section img:hover {
+  transform: scale(1.1); /* Scale up the image when hovered */
+}

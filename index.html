@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js" />
+    <style>
+        /* Introduction Section */
+        #introSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background-image: url('images/2.jpeg'); /* Add your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: rgb(221, 50, 50); /* Adjust text color for better visibility */
+        }
+        #introText {
+            max-width: 50%;
+        }
+        #introText h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        #introText p {
+            font-size: 1.25rem;
+        }
+        #introImage {
+            max-width: 50%;
+            transition: transform 0.5s ease;
+        }
+        #introImage:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sticky Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        /* Card Shadow and Hover Effect */
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Custom styles */
+        body {
+            position: relative; /* Required for scrollspy */
+            scroll-padding-top: 70px; /* Adjust for the height of the navbar */
+        }
+
+        /* Scroll-to-top button styles */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Hidden by default */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s;
+        }
+        #scrollToTop:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MovieHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#introSection">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#latestMoviesSection">Latest Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#upcomingMoviesSection">Upcoming Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <div id="introSection" class="container-fluid">
+        <div id="introText">
+            <h1>Welcome to MovieHub</h1>
+            <p>Your ultimate destination for the latest and greatest movies. Explore our collection and find your next favorite film!</p>
+        </div>
+        <!-- <img id="introImage" src="" width="600px" height="300px" alt="Movies" class="img-fluid" /> -->
+    </div>
+
+    <!-- Main Content ------------------------->
+   
+   <!-- -----------------------------aaaaaaaiiiiiiiiiiiiiii -->
+
+
+
+
+
+        <div class="container mt-5">
+          <h1 class="mb-4" id="latestMoviesSection">Latest Movies</h1>
+  
+          <!-- First Carousel Section -->
+          <div id="latestMoviesCarousel1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row">
+                          <!-- Movie Card 1 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/8.jpg" width="450px" height="600px" class="card-img-top zoom-in-out" alt="Movie 1" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">OBLIVATION</h5>
+                                      <p class="card-text">Oblivion is the story of a man who discovers that the life he thought he knew is a lie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 2 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/3.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 2" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">STORM</h5>
+                                      <p class="card-text">Everything that has a beginning, has an end.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 3 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="IMAGES/5.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 3" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 3</h5>
+                                      <p class="card-text">Description of the latest movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="row">
+                          <!-- Movie Card 4 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/10.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 4" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 4</h5>
+                                      <p class="card-text">Description of the latest movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 5 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/11.jpg" width="480px" height="620px" class="card-img-top zoom-in-out" alt="Movie 5" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 5</h5>
+                                      <p class="card-text">Description of the latest movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 6 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/12.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 6</h5>
+                                      <p class="card-text">Description of the latest movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Carousel controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#latestMoviesCarousel1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#latestMoviesCarousel1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+  
+          <!-- Second Carousel Section -->
+          <h2 class="mb-4 mt-5">Movies</h2>
+          <div id="latestMoviesCarousel2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row">
+                          <!-- Movie Card 1 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/9.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 1" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 1</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 2 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/17.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 2" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 2</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 3 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/19.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 3" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 3</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="row">
+                          <!-- Movie Card 4 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/4.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 4" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 4</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 5 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/6.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 5" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 5</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Movie Card 6 -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                                  <img src="images/16.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                                  <div class="card-body">
+                                      <h5 class="card-title">Movie Title 6</h5>
+                                      <p class="card-text">Description of the upcoming movie.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Carousel controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#latestMoviesCarousel2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#latestMoviesCarousel2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+  
+
+
+
+
+<!-- -------------------------        end aiiiiiiiiiiiiiiiiiiiiiiiii----------------------- -->
+   <!-- -------------------------------------ai round toooooooooooooooo --------------------------------->
+        
+
+
+   <div class="container mt-5">
+    <h1 class="mb-4" id="latestMoviesSection">Newly Updated</h1>
+
+    <!-- First Carousel Section -->
+    <div id="latestMoviesCarousel1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Movie Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/19.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/14.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/9.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Movie Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/5.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/16.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 6 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/16.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#latestMoviesCarousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#latestMoviesCarousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Second Carousel Section -->
+<h2 class="mb-4 mt-5">Upcoming Movies</h2>
+    <div id="latestMoviesCarousel2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Movie Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/14.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/15.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/16.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Movie Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/18.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/7.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movie Card 6 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 animate__animated animate__fadeInUp box-shadow">
+                            <img src="images/16.jpg" width="450px" height="620px" class="card-img-top zoom-in-out" alt="Movie 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Movie Title 6</h5>
+                                <p class="card-text">Description of the upcoming movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#latestMoviesCarousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#latestMoviesCarousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+    <!-- end aiiii tooooooooooooooooo -->
+
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">&#8679;</button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      // Show/hide scroll-to-top button
+      window.addEventListener("scroll", function () {
+        const button = document.getElementById("scrollToTop");
+        if (window.scrollY > 300) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      });
+
+      // Smooth scroll to top
+      document
+        .getElementById("scrollToTop")
+        .addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+      document
+        .getElementById("viewMoreLatest")
+        .addEventListener("click", function () {
+          const hiddenMovies = document.querySelectorAll(
+            "#latestMovies .hidden-movie"
+          );
+          hiddenMovies.forEach((movie) => (movie.style.display = "block"));
+          this.style.display = "none"; // Hide the "View More" button after click
+        });
+
+      document
+        .getElementById("viewMoreUpcoming")
+        .addEventListener("click", function () {
+          const hiddenMovies = document.querySelectorAll(
+            "#upcomingMovies .hidden-movie"
+          );
+          hiddenMovies.forEach((movie) => (movie.style.display = "block"));
+          this.style.display = "none"; // Hide the "View More" button after click
+        });
+
+        function loadImages() {
+          if (navigator.onLine) {
+              document.querySelectorAll('.movie-img').forEach(img => {
+                  img.src = img.getAttribute('data-src');
+              });
+          }
+      }
+
+      // Load images on page load
+      loadImages();
+
+      // Reload images if connection status changes
+      window.addEventListener('online', loadImages);
+      window.addEventListener('offline', () => {
+          console.log('You are offline. Images will not load.');
+      });
+
+    </script>
+  </body>
+</html>
